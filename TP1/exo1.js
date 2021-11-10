@@ -39,7 +39,7 @@ let b = 5;
 let b2 = 0;
 
 // Execution des fonctions
-console.log(a,"+",b,"=", addition(a, b))
+console.log(a, "+", b, "=", addition(a, b))
 console.log(a, "-", b," = ", soustraction(a, b))
 console.log(a,"x",b,"=", multiplication(a, b))
 console.log(a,"/",b,"=", division(a, b))
