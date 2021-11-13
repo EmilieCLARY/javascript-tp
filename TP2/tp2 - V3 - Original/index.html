@@ -14,11 +14,41 @@
 
     </head>
     <body>
-        <div id="header">
+    <!-- <div id="header">
             <h1>Javascript <span class="subtitle">Tuto Plats étudiants</span></h1>
+        </div> -->
+
+        <div class="container">
+            <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+              <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+                <span class="fs-4">JavaScript - Tuto Plats Étudiants</span>
+              </a>
+        
+              <ul class="nav nav-pills">
+                <li class="nav-item"><a href="index.html#Accueil" class="nav-link active" aria-current="page">Accueil</a></li>
+                <li class="nav-item"><a href="index.html#Plats" class="nav-link">Liste des Plats</a></li>
+                <li class="nav-item"><a href="index.html#Ingredients" class="nav-link">Tableau des Ingrédients</a></li>
+              </ul>
+            </header>
+          </div>
+        
+
+        <div id="Accueil">
+
+            <h2> Accueil : </h2>
+
+            <p>Bienvenue sur ce site de recette faciles et rapides pour étudiants !
+                En effet, les étudiants se nourrissent souvent extrêment mal, à base de sandwich, burgers et grâce aux célèbres plateformes de livraisons pour ne pas les citer !<br><br>
+
+                Voici donc quelques recettes, à moindre coût, faciles et rapides à réaliser !<br><br>
+
+                Bon appétit !
+            </p>
+
         </div>
 
-        <div id="content">
+        <div id="Plats">
             <h2>
                 Liste des plats : 
             </h2>
@@ -28,7 +58,7 @@
             </div>
         </div>
 
-        <div id="content">
+        <div id="Ingredients">
             <h2>
                 Tableau des Ingrédients : 
             </h2>
@@ -50,9 +80,17 @@
             </table>
         </div>
 
-        <div id="footer">
-            <p>&copy; CLARY Emilie - MALLET Alexis - CIR 2 - 2020/2021</p>
-        </div>
+
+        <div class="container">
+            <footer class="py-3 my-4">
+              <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="index.html#Accueil" class="nav-link active" aria-current="page">Accueil</a></li>
+                <li class="nav-item"><a href="index.html#Plats" class="nav-link">Liste des plats</a></li>
+                <li class="nav-item"><a href="index.html#Ingredients" class="nav-link">Tableau des Ingrédients</a></li>
+              </ul>
+              <p class="text-center text-muted">&copy; CLARY Emilie - MALLET Alexis - CIR 2 - 2021/2022</p>
+            </footer>
+          </div>
 
         <script src="js/main.js"></script>
 

@@ -44,7 +44,7 @@ body {
     font-size: 12px;
 }
 
-#content {
+#Accueil, #Plats, #Ingredients {
     width: 66%;
     margin: 0 auto;
 }

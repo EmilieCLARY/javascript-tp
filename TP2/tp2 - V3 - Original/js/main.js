@@ -1,30 +1,36 @@
 function mealsList(){
-    let ul = document.getElementById('list');
 
-    for (let i = 0; i < meal.length; i++){
-        let li = document.createElement('li');
+    let ul = document.getElementById('list');                                       // Récupération de l'élément liste
+
+    for (let i = 0; i < meal.length; i++){                                          // Parcours du tableau de recettes
+
+        let li = document.createElement('li');                                      // Création d'un élément liste
         
         let prixIngTotal = 0;
         let ing = [];
 
-        for(let j = 0; j < meal[i].ingredients.length; j++){
-            prixIngTotal += parseFloat(ingredients[meal[i].ingredients[j]].prix);
-            if(j == meal[i].ingredients.length - 1){
-                ing += ingredients[meal[i].ingredients[j]].name + `.`;
+        for(let j = 0; j < meal[i].ingredients.length; j++){                        // Parcours du tableau d'ingrédients
+
+            prixIngTotal += parseFloat(ingredients[meal[i].ingredients[j]].prix);   // Calcul du prix des ingrédients de la recette
+
+            if(j == meal[i].ingredients.length - 1){                                // Affichage des ingrédients
+                ing += ingredients[meal[i].ingredients[j]].name + `.`;              // Si c'est le dernier, on met un "."
             }   
             else{
-                ing += ingredients[meal[i].ingredients[j]].name + `, `;
+                ing += ingredients[meal[i].ingredients[j]].name + `, `;             // Sinon une virgule
             }
             
         }
-        let prixTotal = parseFloat(meal[i].preparationPrice) + prixIngTotal;
-        
 
-        let title = meal[i].name + '\t' + `: ` + prixTotal + `€`;
-        
-        li.innerHTML = `<b> ${title} </b>` + '\t' + `<p> ➡️ <i> Ingrédients :  ${ing} </i> </p>` + '\t' + `<p> ⏱️ <i> Temps de préparation : ${meal[i].preparationTime} minutes </i> </p>` ;    
+        let prixTotal = parseFloat(meal[i].preparationPrice) + prixIngTotal;        // Calcul du prix Total (Prix de préparation + Prix des Ingrédients)
 
-        ul.appendChild(li);
+        let title = meal[i].name + '\t' + `: ` + prixTotal + `€`;                   // Création du titre (Nom du plat + Prix total)
+        
+        li.innerHTML = `<b> ${title} </b>` + '\t' + `<p> ➡️ <i> Ingrédients :  ${ing} </i> </p>` + '\t' + `<p> ⏱️ <i> Temps de préparation : ${meal[i].preparationTime} minutes </i> </p>` ;               // Affichage des informations : Titre, Ingrédients, Temps de préparation
+
+        ul.appendChild(li);                                                         // Ajout de la liste
+
+        ul.className+= "list-group list-group-flush list-group-numbered"
 
     }
 }
@@ -46,11 +52,15 @@ function ingredientsList(){
 
 
         let td1 = document.createElement('td');     // Création d'un élément td (cellule)
-        if(ingredients[i].local == 0){              // Si ce n'est pas local alors on affiche ❌ sinon on affiche ✔️
+
+        if(ingredients[i].local == 0){              // Si ce n'est pas local alors on affiche ❌ 
             td1.innerHTML = `❌`; 
         }
-        else{
+        else if(ingredients[i].local == 1){         // Si c'est local on affiche ✔️
             td1.innerHTML = `✔️`; 
+        }
+        else {
+            td1.innerHTML = `❓`;                   // Si non spécifié, on affiche ❓
         }
         
         tr.appendChild(td1);                        // Ajout d'une cellule à la ligne
@@ -71,5 +81,5 @@ function ingredientsList(){
     
 }
 
-mealsList();
+mealsList();            //Appel des fonctions
 ingredientsList();
