@@ -26,7 +26,7 @@ function mealsList(){
 
         let prixTotal = getMealPreparationPrice(i) + prixIngTotal;                  // Calcul du prix Total (Prix de préparation + Prix des Ingrédients)
 
-        let title = getMealName(i) + '\t' + `: ` + prixTotal + `€`;                 // Création du titre (Nom du plat + Prix total)
+        let title = getMealName(i) + '\t' + `: ` + prixTotal.toFixed(2) + `€`;                 // Création du titre (Nom du plat + Prix total)
         
         li.innerHTML = `<b> ${title} </b>` + '\t' + `<p> ➡️ <i> Ingrédients :  ${ing} </i> </p>` + '\t' + `<p> ⏱️ <i> Temps de préparation : ${getMealPreparationTime(i)} minutes </i> </p>` ;               // Affichage des informations : Titre, Ingrédients, Temps de préparation
 
@@ -73,7 +73,7 @@ function ingredientsList(){
         tr.appendChild(td1);                            // Ajout d'une cellule à la ligne
 
         let td2 = document.createElement('td');         // Création d'un élément td (cellule)
-        td2.innerHTML = `${getIngredientPrice(i)}` + ` €`; //Remplissage de la cellule
+        td2.innerHTML = `${getIngredientPrice(i).toFixed(2)}` + ` €`; //Remplissage de la cellule
 
         td2.style.padding = '15px';                     // Style de la cellule
 
