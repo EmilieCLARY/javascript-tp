@@ -1,2 +1,2 @@
-mealsList();            //Appel des fonctions
-ingredientsList();
+mealsList.makeMealsList();              //Appel des modules précédents
+ingredientsTab.makeIngredientsTab();
