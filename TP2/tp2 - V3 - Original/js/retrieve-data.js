@@ -50,8 +50,11 @@ function getIngredientLocal(number){
     if(parseInt(ingredients[number].local) == 0){
         return false;
     }
-    else{
+    else if(parseInt(ingredients[number].local) == 1){
         return true;
+    }
+    else {
+        return Error;
     }
 }
 
