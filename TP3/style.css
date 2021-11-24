@@ -1,0 +1,72 @@
+*{
+    font-family: 'Orbitron', sans-serif;
+}
+
+body{
+    background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+}
+
+.box{
+    background-color: #0f0c29;
+    height: 500px;
+    width: 430px;
+    border-radius: 20px;
+    position: relative;
+    top: 100px;
+    left: 37%;
+}
+
+.display{
+    background-color: #bccd95;
+    font-size: xx-large;
+    width: 400px;
+    position: relative;
+    padding: 10px;
+    left: 15px;
+    top: 20px;
+    height: 70px;
+    border-radius: 10px;
+    text-align: right;
+}
+
+.boutton{
+    width: 60px;
+    height: 50px;
+    border: none;
+    border-radius: 12px;
+    margin-left: 34px;
+    margin-top: 5px;
+    cursor: pointer;
+    border-top: 3px solid transparent;
+}
+
+.boutton1{
+    color: white;
+    background-color: #4b486b;
+    border-bottom: gold 3px solid;
+}
+
+.boutton2{
+    background-color: red;
+    border-bottom: gold 3px solid;
+}
+
+.boutton1:active{
+    border-bottom: #0f0c29 3px solid;
+}
+
+.boutton2:active{
+    border-bottom: #0f0c29 3px solid;
+}
+
+.boutton3{
+    background-color: gold;
+    width: 257px;
+    height: 50px;
+    border: none;
+    border-radius: 12px;
+    margin-left: 34px;
+    margin-top: 5px;
+    cursor: pointer;
+    border-top: 3px solid transparent;
+}

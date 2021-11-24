@@ -25,26 +25,5 @@ let listener = (function (){
             document.getElementById('clear').addEventListener('click', event => saveDatas.clearCalculator());
         }
         
-        //plus(){
-    //
-        //    document.getElementById('plus').addEventListener('click', event => {
-        //        let result = document.getElementById('result') = operations.addition();
-        //    })
-        //},
-//
-        //minus(){
-//
-        //    document.getElementById('minus').addEventListener('click', event =>{
-        //        let result = document.getElementById('result') = operations.soustraction()
-        //    })
-        //},
-//
-        //division(){
-        //    
-        //    document.getElementById('div').addEventListener('click', event => {
-        //        let result = document.getElementById('result') = operations.division()
-        //    })
-        //},
-
     }
 })();
