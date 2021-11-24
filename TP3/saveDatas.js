@@ -18,7 +18,7 @@ let saveDatas = (function (){
         },
 
         saveOperator(newOperator){
-            if(operator == null && result == null){
+            if(operator == null && result == null || operator != null && result != null){
                 operator = newOperator;
                 console.log(operator);
                 showFunctions.displayOperation(operator);
@@ -49,7 +49,7 @@ let saveDatas = (function (){
                 showFunctions.displayOperation(operator);
                 console.log(operator, result);
             }
-            else{
+            else if(operator != null && result == null){
                 let tmpResult = result;
                 switch (operator) {
                     case '+':
@@ -139,7 +139,7 @@ let saveDatas = (function (){
                 showFunctions.displayResult(result);
             }
             else{
-                showFunctions.displayResult("Y'a un pb");
+                showFunctions.displayResult("ERROR");
             }
 
             console.log(result)
