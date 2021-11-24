@@ -5,18 +5,29 @@ let saveDatas = (function (){
     result = null;
     
     return{
-        
+        // Fonction qui récupère les nombres
         saveNumber(number){
             if(operator == null){
-                op1 += number;
+                if(op1 == null){
+                    op1 = number;
+                }
+                else{
+                    op1 += number;
+                }
             }
             else{
-                op2 += number;
+                if(op2 == null){
+                    op2 = number;
+                }
+                else{
+                    op2 += number;
+                }
             }
             showFunctions.displayOperation(number);
             console.log(number);
         },
 
+        // Fonction qui récupère les opérations et fait les calculs au fur et à mesure
         saveOperator(newOperator){
             if(operator == null && result == null || operator != null && result != null){
                 operator = newOperator;
@@ -78,6 +89,7 @@ let saveDatas = (function (){
             }
         },
 
+        // Fonction qui traite le résultat et l'affiche
         getResult(){
             if(result == null && op1 == null && op2 == null && operator == null){
                 //Fonction affichage 0
@@ -145,6 +157,7 @@ let saveDatas = (function (){
             console.log(result)
         },
 
+        // Fonction qui réinitialise la calculatrice
         clearCalculator(){
             op1 = null;
             op2 = null;
@@ -157,34 +170,3 @@ let saveDatas = (function (){
         }
     }
 })();
-
-//let saveDatas = (function (){
-//    return {
-        
-        /*plus(){
-    
-            document.getElementById('plus').addEventListener('click', event => {
-                let result = document.getElementById('result') = operations.addition();
-            })
-        },
-
-        minus(){
-
-            document.getElementById('minus').addEventListener('click', event =>{
-                let result = document.getElementById('result') = operations.soustraction()
-            })
-        },
-
-        mult(){
-            
-            document.getElementById('div').addEventListener('click', event => {
-                let result = document.getElementById('result') = operations.multiplication()
-            })
-        },
-
-        division(){
-            
-            document.getElementById('div').addEventListener('click', event => {
-                let result = document.getElementById('result') = operations.division()
-            })
-        },*/
