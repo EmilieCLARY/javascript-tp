@@ -1,5 +1,6 @@
 let listener = (function () {
 
+    //Fonction pour l'utilisation du clavier
     function logKey(event) {
         switch (event.code) {
             case 'Digit0':
@@ -38,9 +39,6 @@ let listener = (function () {
             case 'KeyM':
                 saveDatas.saveNumber('.');
                 break;
-            case 'Enter':
-                saveDatas.getResult();
-                break;
             default:
                 break;
         }
@@ -51,7 +49,7 @@ let listener = (function () {
         // Déclaration des listeneurs...
         makeCalculator() {
 
-            // ... pour les bouttons
+            // ... pour les boutons
             document.getElementById('0').addEventListener('click', event => saveDatas.saveNumber('0'));
             document.getElementById('1').addEventListener('click', event => saveDatas.saveNumber('1'));
             document.getElementById('2').addEventListener('click', event => saveDatas.saveNumber('2'));
@@ -66,6 +64,7 @@ let listener = (function () {
             // ... pour les touches du clavier
             document.addEventListener('keydown', logKey);
 
+            // ... pour les boutons d'opération / de . / de résultat / de bouton clear
             document.getElementById('virg').addEventListener('click', event => saveDatas.saveNumber('.'));
 
             document.getElementById('plus').addEventListener('click', event => saveDatas.saveOperator('+'));

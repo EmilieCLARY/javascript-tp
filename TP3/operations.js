@@ -16,7 +16,7 @@ let operations = (function (){
 
         division(val1, val2){
             if(val2 == 0){
-                return("Error : Can't divide by 0.");
+                return("Can't divide by 0.");
             }
             else{
                 return(parseFloat(val1)/parseFloat(val2));
