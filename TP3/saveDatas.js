@@ -122,6 +122,7 @@ let saveDatas = (function (){
                 }
                 op1 = null;
                 op2 = null;
+                //operator = null;
                 //Fonction d'affichage de result
                 showFunctions.displayResult(result);
             }
@@ -147,6 +148,7 @@ let saveDatas = (function (){
                 }
                 op1 = null;
                 op2 = null;
+                //operator = null;
                 //Fonction d'affichage de result
                 showFunctions.displayResult(result);
             }
