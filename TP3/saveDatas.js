@@ -87,8 +87,16 @@ let saveDatas = (function (){
                         result = operations.multiplication(op1, op2);
                         break;
                     case '/':
-                        result = operations.division(op1, op2);
-                        break;
+                        //On gère le cas de la division par 0
+                        if(op2 == 0){
+                            showFunctions.displayResult("Can't divide by 0.");
+                            setTimeout(this.clearCalculator, 2000);     //Délai de 2 secondes et clear
+                            return;
+                        }
+                        else{
+                            result = operations.division(op1, op2);
+                            break;
+                        }
                 
                     default:
                         console.log('There is a problem...');
@@ -117,8 +125,17 @@ let saveDatas = (function (){
                         result = operations.multiplication(tmpResult, op2);
                         break;
                     case '/':
-                        result = operations.division(tmpResult, op2);
-                        break;
+                        //On gère le cas de la division par 0
+                        if(op2 == 0){
+                            showFunctions.displayResult("Can't divide by 0.");
+                            setTimeout(this.clearCalculator, 2000);     //Délai de 2 secondes et clear
+                            return;
+                        }
+                        else{
+                            result = operations.division(tmpResult, op2);
+                            break;
+                        }
+                        
                 
                     default:
                         console.log('There is a problem...');
@@ -134,8 +151,8 @@ let saveDatas = (function (){
             }
             //Si 2 operations sont mises à la suite
             else if(isOperatorDisplay == true){
-                showFunctions.displayResult("Impossible !");    //Affichage
-                setTimeout(this.clearCalculator, 1000);     //Délai de 1 seconde
+                showFunctions.displayResult("Impossible ! Two operations in a row.");    //Affichage
+                setTimeout(this.clearCalculator, 2000);     //Délai de 2 secondes et clear
             }
         },
 
@@ -171,8 +188,16 @@ let saveDatas = (function (){
                         result += operations.multiplication(op1, op2);
                         break;
                     case '/':
-                        result += operations.division(op1, op2);
-                        break;
+                        //On gère le cas de la division par 0
+                        if(op2 == 0){
+                            showFunctions.displayResult("Can't divide by 0.");
+                            setTimeout(this.clearCalculator, 2000);     //Délai de 2 secondes et clear
+                            return;
+                        }
+                        else{
+                            result += operations.division(op1, op2);
+                            break;
+                        }
                 
                     default:
                         console.log('There is a problem...');
@@ -201,8 +226,16 @@ let saveDatas = (function (){
                         result = operations.multiplication(tmpResult, op2);
                         break;
                     case '/':
-                        result = operations.division(tmpResult, op2);
-                        break;
+                        //On gère le cas de la division par 0
+                        if(op2 == 0){
+                            showFunctions.displayResult("Can't divide by 0.");
+                            setTimeout(this.clearCalculator, 2000);     //Délai de 2 secondes et clear
+                            return;
+                        }
+                        else{
+                            result = operations.division(tmpResult, op2);
+                            break;
+                        }
                 
                     default:
                         console.log('There is a problem...');
@@ -216,7 +249,8 @@ let saveDatas = (function (){
                 showFunctions.displayResult(result);    //Affichage
             }
             else{
-                showFunctions.displayResult("ERROR");   //Affichage
+                showFunctions.displayResult("Error Math");   //Affichage
+                setTimeout(this.clearCalculator, 2000);     //Délai de 2 secondes et clear
             }
 
             console.log(result)
