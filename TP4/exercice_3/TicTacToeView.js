@@ -59,6 +59,12 @@ class TicTacToeView{
             let playerName = parseInt(this.game.getCurrentPlayer()) + 1;
             console.log("C'est au joueur " + playerName);
             document.getElementById("player_number").textContent = "C'est au joueur " + playerName;
+            if(this.game.getCurrentPlayer() === 0){
+                document.getElementById("currentShape").innerHTML = '<i class="fas fa-times"></i>';
+            }
+            else{
+                document.getElementById("currentShape").innerHTML = '<i class="far fa-circle"></i>';
+            }
         }
 
         // Affichage des valeurs dans les cases du jeu
@@ -71,10 +77,10 @@ class TicTacToeView{
                 // Si la case n'est pas vide, affichage
                 if(this.game.getCaseState(i, j) !== undefined){
                     if(this.game.getCaseState(i, j) === 0){
-                        currentElement.innerHTML = "<div>X</div>";
+                        currentElement.innerHTML = '<div><i class="fas fa-times"></i></div>';
                     }
                     else{
-                        currentElement.innerHTML = "<div>O</div>"
+                        currentElement.innerHTML = '<div><i class="far fa-circle"></i></div>';
                     }
                 }
                 // Sinon pas d'affichage comme la case est vide

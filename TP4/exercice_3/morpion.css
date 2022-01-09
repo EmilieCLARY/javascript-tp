@@ -1,12 +1,90 @@
+* {
+    font-family: 'Black Ops One', cursive;
+}
+
+h1 {
+    background:-webkit-linear-gradient(top, #ff6d19 30%, #9040F6 70%);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+    font-size: 50px;
+}
+
+h2 {
+    background:-webkit-linear-gradient(top, #ff6d19 30%, #9040F6 70%);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+    font-size: 35px;
+    position: absolute;
+    padding-left: 50px;
+}
+
+#currentShape {
+    background:-webkit-linear-gradient(top, #ff6d19 30%, #9040F6 70%);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+    font-size: 80px;
+    position: absolute;
+    padding-left: 230px;
+}
+
+h3 {
+    background:-webkit-linear-gradient(top, #ff6d19 30%, #9040F6 70%);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+    font-size: 20px;
+}
+
+body {
+    text-align: center;
+    background-image: url("img/background.png");
+}
+
 table {
     border-collapse: collapse;
     margin: 0 auto;
+    border: solid 6px #9040F6;
 }
 
 td {
-    border: solid 1px black;
+    border: solid 5px #ff6d19;
     display: table-cell;
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     text-align: center;
+    transition-duration: 500ms;
+    background:-webkit-linear-gradient(top, #ff6d19 30%, #9040F6 70%);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+    font-size: 80px;
+}
+
+td:hover {
+    background-color: #6E6975;
+    border-radius: 100px;
+}
+
+button {
+    background-color: transparent;
+    border: solid 4px #9040F6;
+    border-radius: 20px;
+    margin-top: 20px;
+    transition-duration: 500ms;
+}
+
+button:hover {
+    background-color: #6E6975;
+    border-radius: 100px;
+}
+
+p {
+    background:-webkit-linear-gradient(top, #ff6d19 30%, #9040F6 70%);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+    font-size: 20px;
 }

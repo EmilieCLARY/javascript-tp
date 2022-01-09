@@ -5,13 +5,22 @@
     <title>Tic Tac Toe - Jeu</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" href="morpion.css" />
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <script type="text/javascript" src="../exercice_1/Observable.js"></script>
     <script type="text/javascript" src="../exercice_2/TicTacToe.js"></script>
     <script type="text/javascript" src="TicTacToeView.js"></script>
 </head>
 
 <body>
+    <h1>Tic Tac Toe Game</h1>
     <h3><span id="player_number"></span></h3>
+    <h2>Actuel :</h2>
+    <div id="currentShape"></div>
     <table id="morpion">
         <tr>
             <td data='1'></td>
@@ -29,8 +38,12 @@
             <td data='9'></td>
         </tr>
     </table>
-    <button id="resetButton">Reset</button>
+    <button id="resetButton"><h3>Reset</h3></button>
     <script type="text/javascript" src="main.js"></script>
 </body>
+<footer>
+    <br><br>
+    <p>&copy; CLARY Emilie - MALLET Alexis - CIR 2 - 2021/2022</p>
+</footer>
 
 </html>
