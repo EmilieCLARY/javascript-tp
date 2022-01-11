@@ -1,22 +1,23 @@
 // Class TicTacToe
 
-
 class TicTacToe extends Observable {
     
-    grid;   // Tableau représentant le morpion
+    grid;   // Tableau de morpion
     currentPlayer;  // Joueur actuel
     event;  // Liste d'événements
 
     // Constructeur
     constructor() {
+
         super();
+
         // Création de la grille, on met à undefined les cases
         this.grid = [
             [undefined, undefined, undefined],
             [undefined, undefined, undefined],
             [undefined, undefined, undefined]
         ];
-        this.currentPlayer = 0; // On donne la priorité au joueur 0
+        this.currentPlayer = 0; // On donne la priorité au joueur 0 au début du jeu
         this.event = new Observable();
     }
 
@@ -25,7 +26,6 @@ class TicTacToe extends Observable {
         this.grid[x][y] = this.currentPlayer;
         this.currentPlayer = (this.currentPlayer + 1) % 2;
         this.getWinner();
-        //console.log(this.grid);
     }
 
     // Getter du joueur actuel
@@ -60,6 +60,7 @@ class TicTacToe extends Observable {
                 return this.grid[0][y];
             }
         }
+
         // Win Lines
         for (let x = 0; x < 3; ++x) {
             if (this.grid[x][0] !== undefined && this.grid[x][0] === this.grid[x][1] && this.grid[x][0] === this.grid[x][2]) {
@@ -67,6 +68,7 @@ class TicTacToe extends Observable {
                 return this.grid[x][0];
             }
         }
+
         // Win diags
         if (this.grid[0][0] !== undefined && this.grid[0][0] === this.grid[1][1] && this.grid[0][0] === this.grid[2][2]) {
             console.log("Player " + this.grid[0][0] + " win the Game !!");
@@ -97,7 +99,9 @@ class TicTacToe extends Observable {
 
         // On teste tous les emplacements de la grille pour voir si ils sont undefined
         for (let x = 0; x < 3; ++x) {
+            
             for (let y = 0; y < 3; ++y) {
+                
                 if (this.grid[x][y] === undefined) {
                     return false; // Si c'est faux, alors la partie continue
                 }
